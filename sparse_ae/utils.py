@@ -28,7 +28,9 @@ def get_sample(values, sample_size):
     :param sample_size: количество значений в сэмпле
     :return: выбранное подмножетсво значений
     """
-    return np.random.choice(values, sample_size)
+    arange = np.arange(len(values))
+    idx = np.random.choice(arange, sample_size)
+    return values[idx]
 
 
 def get_one_item_of_each_class(values, labels):
