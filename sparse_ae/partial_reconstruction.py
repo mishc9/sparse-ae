@@ -13,7 +13,7 @@ if __name__ == '__main__':
     """
     Скрипт строит графики с реконструкцией по k максимальным активациям латентного слоя.
     """
-    autoencoder = create_model(input_size, latent_size, input_size, None)
+    autoencoder = create_model(input_size, latent_size, None)
     (X_train, y_train), (X_test, y_test) = load_mnist(input_size)
     sample = get_one_item_of_each_class(X_test, y_test)
     k_active_neurons = (4, 8, 16, 32, 64)
